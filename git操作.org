@@ -1,12 +1,15 @@
 * *创建版本库*
-| mkdir git                                          | 创建一个空目录                  |
-| pwd                                                | 显示当前目录                    |
-| git init                                           | 把这个目录变成git可以管理的仓库 |
-| git add readme.txt                                 | 文件添加                        |
-| git commit -m "add file"                           | 文件提交                        |
-| git status                                         | 仓库当前状态                    |
-| git config --global user.name "Your Name"          |                                 |
-| git config --global user.email "email@example.com" |                                 |
+| mkdir git                                          | 创建一个空目录                                                              |
+| pwd                                                | 显示当前目录                                                                |
+| git init                                           | 把这个目录变成git可以管理的仓库                                             |
+| git add readme.txt                                 | 文件添加                                                                    |
+| git add .                                          | 加所有，会把当前所有的untrack files和changed but not updated添加到stage状态 |
+| git add [path]                                     | 会把对应目录或文件，添加到stage状态                                         |
+| git commit -m "add file"                           | 文件提交                                                                    |
+| git status                                         | 仓库当前状态                                                                |
+| git config --global user.name "Your Name"          | 注册用户名                                                                  |
+| git config --global user.email "email@example.com" | 注册用户邮箱                                                                |
+| git config –list                                   | 查看用户信息                                                                |
 * *版本回退*
 | git log                     | 版本回退                                                                                                   |   |
 | git reset --hard HEAD^      | 回退到上一个版本                                                                                           |   |
