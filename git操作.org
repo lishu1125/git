@@ -4,7 +4,6 @@
 | git init                                           | 把这个目录变成git可以管理的仓库                                             |
 | git add readme.txt                                 | 文件添加                                                                    |
 | git add .                                          | 加所有，会把当前所有的untrack files和changed but not updated添加到stage状态 |
-| git add [path]                                     | 会把对应目录或文件，添加到stage状态                                         |
 | git commit -m "add file"                           | 文件提交                                                                    |
 | git status                                         | 仓库当前状态                                                                |
 | git config --global user.name "Your Name"          | 注册用户名                                                                  |
@@ -37,6 +36,7 @@
 | git push -u origin master                                     | 把本地库的所有内容推送到远程库上                          |
 |                                                               | 由于远程库是空的，第一次推送master分支时，加上了-u参数    |
 | git push origin master                                        | 把本地master分支的最新修改推送至GitHub                    |
+| git remote                                                    | 查看仓库名                                                |
 * *从远程库克隆*
 | git clone git@github.com:michaelliao/gitskills.git | 克隆一个本地库 |
 * *创建与合并分支*
