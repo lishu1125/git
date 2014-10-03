@@ -27,18 +27,20 @@
 | git rm readme.txt          | 从版本库中删除该文件       |
 | git checkout -- readme.txt | 把误删的文件恢复到最新版本 |
 * *github远程仓库*
-| ssh-keygen -t rsa -C "youremail@example.com" | 创建SSH Key                                                                                   |
-|                                              | 可以在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对， |
-|                                              | id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥                                                  |
-* *添加远程库*
-| git remote add origin git@github.com:michaelliao/learngit.git | 把一个已有的本地仓库与之关联                              |
-|                                                               | 远程库的名字就是origin，这是Git默认的叫法，也可以改成别的 |
-| git push -u origin master                                     | 把本地库的所有内容推送到远程库上                          |
-|                                                               | 由于远程库是空的，第一次推送master分支时，加上了-u参数    |
-| git push origin master                                        | 把本地master分支的最新修改推送至GitHub                    |
-| git remote                                                    | 查看仓库名                                                |
-* *从远程库克隆*
-| git clone git@github.com:michaelliao/gitskills.git | 克隆一个本地库 |
+| ssh-keygen -t rsa -C "youremail@example.com"                  | 创建SSH Key                                                                                                                          |
+|                                                               | 可以在用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，                                        |
+|                                                               | id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥                                                                                         |
+| git remote add origin git@github.com:michaelliao/learngit.git | 把一个已有的本地仓库与之关联                                                                                                         |
+|                                                               | 远程库的名字就是origin，这是Git默认的叫法，也可以改成别的                                                                            |
+| git push -u origin master                                     | 把本地库的所有内容推送到远程库上                                                                                                     |
+|                                                               | 由于远程库是空的，第一次推送master分支时，加上了-u参数                                                                               |
+| git push origin master                                        | 把本地master分支的最新修改推送至GitHub                                                                                               |
+| git remote                                                    | 查看仓库名                                                                                                                           |
+| git fetch origin master:tmp                                   | 从远程获取最新的版本到本地的分支上之后再进行比较合并                                                                                 |
+| git diff tmp                                                  |                                                                                                                                      |
+| git merge tmp                                                 |                                                                                                                                      |
+| git pull origin master                                        | 上述命令其实相当于git fetch 和 git merge，在实际使用中，git fetch更安全一些，因为在merge前，我们可以查看更新情况，然后再决定是否合并 |
+| git clone git@github.com:michaelliao/gitskills.git            | 克隆一个本地库                                                                                                                       |
 * *创建与合并分支*
 | git checkout -b dev | 创建dev分支，然后切换到dev分支                                               |
 |                     | git checkout命令加上-b参数表示创建并切换，相当于以下两条命令:                |
